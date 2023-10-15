@@ -1,6 +1,7 @@
 import { View, Text } from "react-native";
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { Ionicons } from "@expo/vector-icons"; 
 import Home from "../Screen/Home";
 import Fav from "../Screen/Fav";
 import Search from "../Screen/Search";
@@ -22,8 +23,7 @@ const TabNavigation = () => {
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="home" color={color} size={size} />
           ),
-        }}
-      />
+        }}/>
       <Tab.Screen name="Search" component={Search} />
       <Tab.Screen name="Fav" component={Fav} />
       <Tab.Screen name="Profile" component={Profile} />
