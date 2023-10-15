@@ -4,7 +4,7 @@ import Header from "../Components/Home/Header";
 
 const Home = () => {
   return (
-    <View>
+    <View style={{padding:40}}>
       <Header />
     </View>
   )
