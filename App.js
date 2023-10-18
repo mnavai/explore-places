@@ -5,10 +5,15 @@ import TabNavigation from "./App/Navigations/TabNavigation";
 import { useEffect, useState } from "react";
 import * as Location from "expo-location";
 import { UserLocationContext } from "./App/Context/UserLocationContext";
+import { useFonts } from "expo-font";
 
 export default function App() {
   const [location, setLocation] = useState(null);
   const [errorMsg, setErrorMsg] = useState(null);
+  const [fontsLoaded] = useFonts({
+    "Raleway-Regular": require("./assets/Fonts/Raleway-Regular.ttf"),
+    "Raleway-Semibold": require("./assets/Fonts/Raleway-SemiBold.ttf"),
+  });
 
   useEffect(() => {
     (async () => {
