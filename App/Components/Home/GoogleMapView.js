@@ -21,7 +21,15 @@ export default function GoogleMapView() {
   },[]);
   return (
     <View style={{ marginTop: 20 }}>
-      <Text style={{ fontSize:18, marginBottom:10, marginLeft:3, fontWeight:"600", fontFamily: 'Raleway-Semibold' }}>
+      <Text
+        style={{
+          fontSize: 18,
+          marginBottom: 10,
+          marginLeft: 3,
+          fontWeight: "600",
+          fontFamily: "Raleway-Semibold",
+        }}
+      >
         Top Near Places
       </Text>
       <View style={{ marginTop: 10 }}>
@@ -35,7 +43,7 @@ export default function GoogleMapView() {
           showsUserLocation={true}
           region={mapRegion}
         >
-            <Marker title="You" coordinate={mapRegion} />
+          <Marker title="You" coordinate={mapRegion} />
         </MapView>
       </View>
     </View>
