@@ -9,7 +9,7 @@ export default function GoogleMapView() {
   const { location, setLocation } = useContext(UserLocationContext);
   console.log("location",location)
 
-  useEffect((location)=>{
+  useEffect(() => {
     if(location){
         setmapRegion({
           latitude: location.coords.latitude,
