@@ -30,6 +30,7 @@ const CategoryList = () => {
       </Text>
       <FlatList
         data={categoryList}
+        horizontal={true}
         renderItem={({ item }) => (
           <View>
             <CategoryItem category={item} />
