@@ -35,7 +35,7 @@ export default function GoogleMapView() {
           showsUserLocation={true}
           region={mapRegion}
         >
-            <Marker />
+            <Marker title='You'  />
         </MapView>
       </View>
     </View>
