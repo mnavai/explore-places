@@ -2,7 +2,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import TabNavigation from "./App/Navigations/TabNavigation";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import * as Location from "expo-location";
 
 export default function App() {
