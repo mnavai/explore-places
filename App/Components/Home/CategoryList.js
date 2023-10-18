@@ -1,5 +1,6 @@
-import { View, Text, FlatList } from 'react-native';
-import React from 'react';
+import { View, Text, FlatList } from "react-native";
+import React from "react";
+import CategoryItem from "./CategoryItem";
 
 const CategoryList = () => {
   const categoryList = [
@@ -21,21 +22,21 @@ const CategoryList = () => {
       value: "cafe",
       icon: require("./../../../assets/cafe.png"),
     },
-  ];  
+  ];
   return (
     <View style={{ marginTop: 15 }}>
       <Text style={{ fontSize: 18, fontFamily: "Raleway-Semibold" }}>
         Select Top Category
       </Text>
-      <FlatList 
+      <FlatList
         data={categoryList}
-        renderItem={({item}) => (
-            <View>
-                <Text>{item.name}</Text>
-            </View>
+        renderItem={({ item }) => (
+          <View>
+            <CategoryItem category={item} />
+          </View>
         )}
-       />
+      />
     </View>
   );
-}
+};
 export default CategoryList;
