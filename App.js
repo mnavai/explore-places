@@ -4,6 +4,7 @@ import { StyleSheet, Text, View } from "react-native";
 import TabNavigation from "./App/Navigations/TabNavigation";
 import { useEffect, useState } from "react";
 import * as Location from "expo-location";
+import { UserLocationContext } from "./App/Context/UserLocationContext";
 
 export default function App() {
   const [location, setLocation] = useState(null);
@@ -19,15 +20,17 @@ export default function App() {
 
       let location = await Location.getCurrentPositionAsync({});
       setLocation(location);
-      console.log("location: ",location)
+      console.log("location: ", location);
     })();
   }, []);
   return (
-    <View style={styles.container}>
-      <NavigationContainer>
-        <TabNavigation></TabNavigation>
-      </NavigationContainer>
-    </View>
+    <UserLocationContext.Provider>
+      <View style={styles.container}>
+        <NavigationContainer>
+          <TabNavigation></TabNavigation>
+        </NavigationContainer>
+      </View>
+    </UserLocationContext.Provider>
   );
 }
 
