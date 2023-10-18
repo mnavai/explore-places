@@ -1,10 +1,11 @@
 import { View, Text, Image, TextInput, Dimensions } from 'react-native';
 import { StyleSheet } from 'react-native';
 import React from 'react';
+import Colors from '../../Shared/Colors';
 
 const Header = () => {
   return (
-    <View style={{display:'flex', flexDirection:'row', justifyContent:'space-evenly'}}>
+    <View style={{display:'flex', flexDirection:'row', justifyContent:'space-evenly', gap:20, alignItems: 'center' }}>
       <Image source={require('./../../../assets/logo.png')} style={styles.logo} />
       <View>
         <TextInput placeholder='Search' style={styles.searchBar}></TextInput>
@@ -23,11 +24,11 @@ const styles = StyleSheet.create({
   },
   searchBar: {
     borderWidth: 1,
-    borderColor: "#000",
+    borderColor: Colors.black,
     padding: 4,
     borderRadius: 50,
     paddingLeft: 10,
-    width: Dimensions.get('screen').width*0.6
+    width: Dimensions.get('screen').width*0.5
   },
   userImage: {
     width: 50,
