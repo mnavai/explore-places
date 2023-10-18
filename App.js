@@ -20,11 +20,11 @@ export default function App() {
 
       let location = await Location.getCurrentPositionAsync({});
       setLocation(location);
-      console.log("location: ", location);
+      
     })();
   }, []);
   return (
-    <UserLocationContext.Provider>
+    <UserLocationContext.Provider value={{location, setLocation}}> 
       <View style={styles.container}>
         <NavigationContainer>
           <TabNavigation></TabNavigation>
