@@ -12,8 +12,8 @@ const CategoryList = () => {
     },
     {
       id: 2,
-      name: "Retaurant",
-      value: "retaurant",
+      name: "Restaurant",
+      value: "restaurant",
       icon: require("./../../../assets/food.png"),
     },
     {
