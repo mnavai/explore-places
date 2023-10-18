@@ -11,9 +11,7 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
@@ -21,12 +19,20 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff",
-        "package":"com.tubeguruji.findplace",
-        "googleMapsApiKey":"AIzaSyBVpVXdCtGdyQA1ncC4LN1jvpZThzT9vNA"
+        "package": "com.tubeguruji.findplace",
+        "googleMapsApiKey": "AIzaSyBVpVXdCtGdyQA1ncC4LN1jvpZThzT9vNA"
       }
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow the app to use your location."
+        }
+      ]
+    ]
   }
 }
