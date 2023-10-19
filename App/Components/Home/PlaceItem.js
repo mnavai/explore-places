@@ -12,21 +12,23 @@ const PlaceItem = ({ place }) => {
         flex: 1,
         width: "100%",
         alignItems: "center",
+        gap:15,
+        marginBottom:20
       }}
     >
       <Image
         source={require("./../../../assets/placeholder.jpg")}
-        style={{ width: 120, height: 120 }}
+        style={{ width: 100, height: 100, borderRadius:15 }}
       />
-      <View>
+      <View style={{flex:1}}>
         <Text 
             numberOfLines={2}
-            style={{ fontSize: 16, fontFamily: "Raleway-Semibold", marginBottom:10  }}>
+            style={{ fontSize: 14, fontFamily: "Raleway-Semibold", marginBottom:5  }}>
             {place.name}
         </Text>
         <Text
             numberOfLines={2} 
-            style={{ fontSize: 16, marginBottom:10 }}>{place.vicinity}</Text>
+            style={{ fontSize: 12, marginBottom:10 }}>{place.vicinity}</Text>
         <View
           style={{
             display: "flex",
