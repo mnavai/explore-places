@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native'
+import { View, Text, ScrollView } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import Header from "../Components/Home/Header";
 import GoogleMapView from '../Components/Home/GoogleMapView';
@@ -20,12 +20,12 @@ const Home = () => {
     })
   }
   return (
-    <View style={{padding:40}}>
+    <ScrollView style={{padding:40}}>
       <Header />
       <GoogleMapView />
       <CategoryList />
       {placeList ? <PlaceList placeList={placeList} /> : null}
-    </View>
+    </ScrollView>
   )
 }
 export default Home;

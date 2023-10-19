@@ -28,7 +28,7 @@ const PlaceItem = ({ place }) => {
         </Text>
         <Text
             numberOfLines={2} 
-            style={{ fontSize: 12, marginBottom:10 }}>{place.vicinity}</Text>
+            style={{ fontSize: 12, marginBottom:10, color:Colors.DARKGRAY }}>{place.vicinity}</Text>
         <View
           style={{
             display: "flex",

@@ -25,7 +25,7 @@ const CategoryList = () => {
   ];
   return (
     <View style={{ marginTop: 15 }}>
-      <Text style={{ fontSize: 18, fontFamily: "Raleway-Semibold" }}>
+      <Text style={{ fontSize: 18, fontFamily: "Raleway-Semibold", marginBottom:10 }}>
         Select Top Category
       </Text>
       <FlatList
