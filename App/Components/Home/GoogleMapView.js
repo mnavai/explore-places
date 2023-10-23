@@ -4,6 +4,7 @@ import MapView, {PROVIDER_GOOGLE, Marker} from "react-native-maps";
 import { UserLocationContext } from '../../Context/UserLocationContext';
 
 export default function GoogleMapView() {
+  //useState
   const [mapRegion, setmapRegion] = useState({});  
 
   const { location, setLocation } = useContext(UserLocationContext);
