@@ -5,6 +5,7 @@ import GoogleMapView from '../Components/Home/GoogleMapView';
 import CategoryList from '../Components/Home/CategoryList';
 import GlobalApi from '../Services/GlobalApi';
 import PlaceList from '../Components/Home/PlaceList';
+// this is a comment
 
 const Home = () => {
   const [placeList, setPlaceList] = useState([]);
