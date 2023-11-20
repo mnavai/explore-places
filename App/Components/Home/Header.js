@@ -2,7 +2,8 @@ import { View, Text, Image, TextInput, Dimensions } from 'react-native';
 import { StyleSheet } from 'react-native';
 import React from 'react';
 import Colors from '../../Shared/Colors';
-//Home header component
+
+//Start of Home component
 const Header = () => {
   return (
     <View style={{display:'flex', flexDirection:'row', justifyContent:'space-evenly', gap:20, alignItems: 'center' }}>
