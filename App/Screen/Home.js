@@ -1,11 +1,11 @@
-import { View, Text, ScrollView } from 'react-native'
+import { ScrollView } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import Header from "../Components/Home/Header";
 import GoogleMapView from '../Components/Home/GoogleMapView';
 import CategoryList from '../Components/Home/CategoryList';
 import GlobalApi from '../Services/GlobalApi';
 import PlaceList from '../Components/Home/PlaceList';
-// Testing
+
 const Home = () => {
   const [placeList, setPlaceList] = useState([]);
 
