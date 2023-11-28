@@ -17,6 +17,7 @@ const Home = () => {
     GlobalApi.nearByPlace().then(resp => {
       console.log("res",resp.data.results)
       setPlaceList(resp.data.results)
+      console.log("res",resp.data.results)
     })
   }
   return (
