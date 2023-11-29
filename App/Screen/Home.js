@@ -12,12 +12,14 @@ const Home = () => {
   const {location, setLocation} = useContext(UserLocationContext)
 
   useEffect(()=>{
-    GetNearbySearchPlace('restaurant');
-  },[])
+    if (location){
+      GetNearbySearchPlace('restaurant');
+    }
+  },[location])
 
   const GetNearbySearchPlace = (value) => {
+    console.log("category",value)
     GlobalApi.nearByPlace(location.coords.latitude,location.coords.longitude, value).then(resp => {
-      console.log("res",resp.data.results)
       setPlaceList(resp.data.results)
     })
   }
