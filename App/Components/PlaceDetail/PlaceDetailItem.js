@@ -8,9 +8,10 @@ import { Ionicons } from "@expo/vector-icons";
 import GoogleMapView from '../Home/GoogleMapView';
 
 const PlaceDetailItem=({place, onDirectionClick}) => {
+ 
   return (
-    <View>
-      <Text style={{ fontSize: 26, fontFamily: "Raleway-Bold", marginBottom: 10 }}>{place.name}</Text>
+    <View style={{ display:"flex", alignItems:"center" }}>
+      <Text style={{ fontSize: 26, fontFamily: "Raleway-Bold" }}>{place.name}</Text>
       {place?.photos? <Image
         source={{
           uri:
@@ -30,7 +31,6 @@ const PlaceDetailItem=({place, onDirectionClick}) => {
           display:'flex',
           alignItems: "center",
           gap: 5,
-          marginTop: 5,
           flexDirection: "row",
         }}
       >
@@ -38,14 +38,14 @@ const PlaceDetailItem=({place, onDirectionClick}) => {
         <Text>{place.rating}</Text>
       </View>
       <View>
-        <Text style={{ fontSize: 16, marginTop: 10, color: Colors.DARKGRAY }} numberOfLines={2}>{place.vicinity}</Text>
+        <Text style={{ fontSize: 16, marginTop: 5, color: Colors.DARKGRAY }} numberOfLines={2}>{place.vicinity}</Text>
         {place?.opening_hours ? (
           <Text style={{ fontFamily:"Raleway-Bold", marginTop: 5, color: "red" }}>
             {place?.opening_hours?.open_now == true ? "Open" : "Closed"}
           </Text>
         ) : null}
       </View>
-       <View style={{marginTop:10,flexDirection:'row',
+       <View style={{marginTop:8,flexDirection:'row',
     display:'flex', gap:10}}>
         <TouchableOpacity onPress={()=>onDirectionClick()}
           style={{
@@ -61,7 +61,7 @@ const PlaceDetailItem=({place, onDirectionClick}) => {
           }}
         >
           <Ionicons name="navigate-circle-outline" size={24} color="black" />
-          <Text style={{ fontFamily: "raleway", fontSize: 16 }}>Direction</Text>
+          <Text style={{ fontFamily: "Raleway", fontSize: 16 }}>Direction</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={()=>Share.SharePlace(place)}
           style={{
@@ -77,7 +77,7 @@ const PlaceDetailItem=({place, onDirectionClick}) => {
           }}
         >
          <Ionicons name="md-share-outline" size={24} color="black" />
-          <Text style={{ fontFamily: "raleway", fontSize: 16 }}>Share</Text>
+          <Text style={{ fontFamily: "Raleway", fontSize: 16 }}>Share</Text>
         </TouchableOpacity>
         </View>
     </View>

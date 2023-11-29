@@ -27,15 +27,22 @@ export default function PlaceDetail() {
       console.error("Error opening URL:", error);
     }
   };
-  
-  
+
   return (
-    <ScrollView style={{ padding: 20, backgroundColor: Colors.WHITE, flex: 1 }}>
+    <ScrollView   style={{
+      flex: 1,
+      backgroundColor: Colors.WHITE,
+      padding: 20,
+    }}
+    contentContainerStyle={{
+      justifyContent: 'center',
+      alignItems: 'center',
+    }}>
       <PlaceDetailItem
         place={place}
         onDirectionClick={() => onDirectionClick()}
       />
-      <GoogleMapView placeList={[place]} />
+      <GoogleMapView placeList={[place]}/>
       <TouchableOpacity
         style={{
           backgroundColor: "orange",
