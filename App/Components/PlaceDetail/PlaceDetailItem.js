@@ -5,6 +5,7 @@ import { AntDesign } from "@expo/vector-icons";
 import { Image } from 'react-native';
 import { TouchableOpacity } from 'react-native';
 import { Ionicons } from "@expo/vector-icons";
+import GoogleMapView from '../Home/GoogleMapView';
 
 const PlaceDetailItem=({place, onDirectionClick}) => {
   return (

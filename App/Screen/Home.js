@@ -20,7 +20,7 @@ const Home = () => {
   const GetNearbySearchPlace = (value) => {
     
     GlobalApi.nearByPlace(location.coords.latitude,location.coords.longitude, value).then(resp => {
-      setPlaceList(resp.data.results)
+      setPlaceList(resp.data.results);
     })
   }
   return (

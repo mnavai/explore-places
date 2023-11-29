@@ -2,9 +2,13 @@ import React from 'react'
 import { Marker } from 'react-native-maps';
 
 const PlaceMarker = ({item}) => {
+  if (!item || !item.geometry || !item.geometry.location) {
+    // Return null or a default Marker if 'item' is not defined or lacks the expected structure
+    return null;
+  }
   return (
     <Marker 
-    title={item.name}
+    title={item.name} 
     coordinate={
         {
             latitude: item.geometry.location.lat,
@@ -14,7 +18,8 @@ const PlaceMarker = ({item}) => {
         }
     }
      >
-    </Marker>
+    
+        </Marker>
   )
 }
 export default PlaceMarker;
