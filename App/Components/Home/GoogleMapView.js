@@ -2,13 +2,13 @@ import { View, Text, Dimensions } from 'react-native';
 import React, { useContext, useEffect, useState } from "react";
 import MapView, {PROVIDER_GOOGLE, Marker} from "react-native-maps";
 import { UserLocationContext } from '../../Context/UserLocationContext';
+import PlaceMarker from './PlaceMarker';
 
-export default function GoogleMapView() {
-  //useState
+export default function GoogleMapView({placeList}) {
+
   const [mapRegion, setmapRegion] = useState({});  
 
   const { location, setLocation } = useContext(UserLocationContext);
-  console.log("location",location)
 
   useEffect(() => {
     if(location){
@@ -34,7 +34,7 @@ export default function GoogleMapView() {
         Top Near Places
       </Text>
       <View style={{ marginTop: 10 }}>
-        <MapView
+      {location? <MapView
           style={{
             width: Dimensions.get("screen").width * 0.82,
             height: Dimensions.get("screen").height * 0.23,
@@ -45,7 +45,10 @@ export default function GoogleMapView() {
           region={mapRegion}
         >
           <Marker title="You" coordinate={mapRegion} />
-        </MapView>
+            {placeList?.map((item,index)=>index<=5&&(
+                <PlaceMarker item={item} />
+            ))}
+        </MapView>:null}
       </View>
     </View>
   );
