@@ -16,7 +16,7 @@ const PlaceItem = ({ place }) => {
         marginBottom: 20,
       }}
     >
-      <Image
+     {place?.photos? <Image
         source={{
           uri:
             "https://maps.googleapis.com/maps/api/place/photo" +
@@ -26,7 +26,10 @@ const PlaceItem = ({ place }) => {
             "&key=AIzaSyBVpVXdCtGdyQA1ncC4LN1jvpZThzT9vNA",
         }}
         style={{ width: 100, height: 100, borderRadius: 15 }}
-      />
+      />:
+      <Image source={require('./../../../assets/placeholder.jpg')}
+      style={{ width: 100, height: 100, borderRadius: 15 }}
+      />}
       <View style={{ flex: 1 }}>
         <Text
           numberOfLines={2}
@@ -58,6 +61,6 @@ const PlaceItem = ({ place }) => {
       </View>
     </View>
   );
-};
+}
 
 export default PlaceItem;
