@@ -9,7 +9,7 @@ import { Ionicons } from "@expo/vector-icons";
 const PlaceDetailItem=({place, onDirectionClick}) => {
   return (
     <View>
-      <Text style={{ fontSize: 26, fontFamily: "Raleway-Bold" }}>{place.name}</Text>
+      <Text style={{ fontSize: 26, fontFamily: "Raleway-Bold", marginBottom: 10 }}>{place.name}</Text>
       {place?.photos? <Image
         source={{
           uri:
@@ -35,6 +35,14 @@ const PlaceDetailItem=({place, onDirectionClick}) => {
       >
         <AntDesign name='star' size={20} color={Colors.YELLOW} />
         <Text>{place.rating}</Text>
+      </View>
+      <View>
+        <Text style={{ fontSize: 16, marginTop: 10, color: Colors.DARKGRAY }} numberOfLines={2}>{place.vicinity}</Text>
+        {place?.opening_hours ? (
+          <Text style={{ fontFamily:"Raleway-Bold", marginTop: 5, color: "red" }}>
+            {place?.opening_hours?.open_now == true ? "Open" : "Closed"}
+          </Text>
+        ) : null}
       </View>
        <View style={{marginTop:10,flexDirection:'row',
     display:'flex', gap:10}}>
