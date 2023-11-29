@@ -18,7 +18,7 @@ const Home = () => {
   },[location])
 
   const GetNearbySearchPlace = (value) => {
-    console.log("category",value)
+    
     GlobalApi.nearByPlace(location.coords.latitude,location.coords.longitude, value).then(resp => {
       setPlaceList(resp.data.results)
     })
@@ -26,7 +26,7 @@ const Home = () => {
   return (
     <ScrollView style={{padding:40}}>
       <Header />
-      <GoogleMapView />
+      <GoogleMapView placeList={placeList} />
       <CategoryList setSelectedCategory={(value) => GetNearbySearchPlace(value)} />
       {placeList ? <PlaceList placeList={placeList} /> : null}
     </ScrollView>

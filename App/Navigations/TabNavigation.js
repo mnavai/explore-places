@@ -7,6 +7,7 @@ import Home from "../Screen/Home";
 import Fav from "../Screen/Fav";
 import Search from "../Screen/Search";
 import Profile from "../Screen/Profile";
+import HomeNavigation from "./HomeNavigation";
 
 const TabNavigation = () => {
   const Tab = createBottomTabNavigator();
@@ -18,7 +19,7 @@ const TabNavigation = () => {
     >
       <Tab.Screen
         name="Home"
-        component={Home}
+        component={HomeNavigation}
         options={{
           tabBarLabel: "Home",
           tabBarIcon: ({ color, size }) => (
