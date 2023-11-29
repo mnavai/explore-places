@@ -17,11 +17,19 @@ export default function PlaceDetail() {
   useEffect(()=>{
     setPlace(param.place)
   },[])
+
+  const onDirectionClick = async () => {
+    const url = `https://www.google.com/maps/search/?api=1&query=${place.geometry.location.lat},${place.geometry.location.lng}`;
+  
+    try {
+      await Linking.openURL(url);
+    } catch (error) {
+      console.error("Error opening URL:", error);
+    }
+  };
+  
+  
   return (
-    // <View style={{padding:20,backgroundColor: Colors.WHITE, flex:1}}>
-    //   <PlaceDetailItem place={place} />
-    //   <GoogleMapView placeList={[place]} />
-    // </View>
     <ScrollView style={{ padding: 20, backgroundColor: Colors.WHITE, flex: 1 }}>
       <PlaceDetailItem
         place={place}
@@ -30,7 +38,7 @@ export default function PlaceDetail() {
       <GoogleMapView placeList={[place]} />
       <TouchableOpacity
         style={{
-          backgroundColor: Colors.PRIMARY,
+          backgroundColor: "orange",
           padding: 15,
           alignContent: "center",
           alignItem: "center",
@@ -40,17 +48,17 @@ export default function PlaceDetail() {
           gap:10,
           justifyContent:'center',
           alignItems:'center',
-          borderRadius: 50,
+          borderRadius: 40,
           paddingBottom: 15,
+          width: 345,
         }}
         onPress={() => onDirectionClick()}
       >
           <Ionicons name="navigate-circle-outline" 
-          size={30} color="white" />
-
+          size={30} color="gray" />
         <Text
           style={{
-            fontFamily: "raleway",
+            fontFamily: "Raleway",
             textAlign: "center",
             color: Colors.WHITE,
           }}
