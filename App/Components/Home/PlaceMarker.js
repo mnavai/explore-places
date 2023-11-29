@@ -4,7 +4,7 @@ import { Marker } from 'react-native-maps';
 const PlaceMarker = ({item}) => {
   return (
     <Marker 
-    title="You"
+    title={title.name}
     coordinate={
         {
             latitude: item.geometry.location.lat,

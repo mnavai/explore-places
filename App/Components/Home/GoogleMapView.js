@@ -4,7 +4,7 @@ import MapView, {PROVIDER_GOOGLE, Marker} from "react-native-maps";
 import { UserLocationContext } from '../../Context/UserLocationContext';
 import PlaceMarker from './PlaceMarker';
 
-export default function GoogleMapView({placeList}) {
+const GoogleMapView = ({placeList}) => {
 
   const [mapRegion, setmapRegion] = useState({});  
 
@@ -19,7 +19,7 @@ export default function GoogleMapView({placeList}) {
           longitudeDelta: 0.0421,
         });
     }
-  },[]);
+  },[location]);
   return (
     <View style={{ marginTop: 20 }}>
       <Text
@@ -46,10 +46,11 @@ export default function GoogleMapView({placeList}) {
         >
           <Marker title="You" coordinate={mapRegion} />
             {placeList?.map((item,index)=>index<=5&&(
-                <PlaceMarker item={item} />
+                <PlaceMarker item={item} key={index}/>
             ))}
         </MapView>:null}
       </View>
     </View>
   );
 }
+export default GoogleMapView
