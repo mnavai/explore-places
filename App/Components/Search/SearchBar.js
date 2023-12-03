@@ -1,7 +1,7 @@
 import { View, Text, Dimensions } from 'react-native';
 import React from 'react';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Dimensions } from "react-native";
+
 import Colors from "../../Shared/Colors";
 import { Image } from "react-native";
 import { TextInput } from "react-native";
