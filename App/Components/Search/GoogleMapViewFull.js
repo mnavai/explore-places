@@ -36,9 +36,9 @@ const GoogleMapViewFull=({placeList}) => {
             title="You" 
             coordinate={mapRegion}
              />
-            {/* {placeList.map((item,index)=>index<=4&&(
+            {placeList.map((item,index)=>index<=4&&(
                 <PlaceMarker item={item} key={index} />
-            ))} */}
+            ))}
            
         </MapView>:null} 
     </View>
