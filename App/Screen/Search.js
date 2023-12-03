@@ -4,6 +4,7 @@ import GoogleMapViewFull from '../Components/Search/GoogleMapViewFull';
 import SearchBar from '../Components/Search/SearchBar';
 import { UserLocationContext } from '../Context/UserLocationContext';
 import GlobalApi from '../Services/GlobalApi';
+import BusinessList from '../Components/Search/BusinessList';
 
 const Search = () => {
   const [placeList, setPlaceList] = useState([])
@@ -24,6 +25,9 @@ const Search = () => {
         <SearchBar />
       </View>
       <GoogleMapViewFull />
+      <View style={{position:'absolute', zIndex:20, bottom:0}}>
+        <BusinessList/>
+      </View>
     </View>
   )
 }

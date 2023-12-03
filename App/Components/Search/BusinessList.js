@@ -1,10 +1,14 @@
 import { View, Text } from 'react-native'
 import React from 'react'
+import Colors from '../../Shared/Colors'
 
-const BusinessList=()=> {
+const BusinessList=({placeList})=> {
   return (
     <View>
-      <Text>BusinessList</Text>
+        <LinearGradient
+        colors={["transparent", Colors.WHITE]}
+        style={{padding:20, width: Dimensions.get("screen".width)}}>
+        </LinearGradient>
     </View>
   )
 }

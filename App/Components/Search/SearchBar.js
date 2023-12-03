@@ -1,7 +1,6 @@
 import { View, Text, Dimensions } from 'react-native';
 import React from 'react';
 import { LinearGradient } from 'expo-linear-gradient';
-
 import Colors from "../../Shared/Colors";
 import { Image } from "react-native";
 import { TextInput } from "react-native";
@@ -12,7 +11,7 @@ const SearchBar=() => {
     <View>
       <LinearGradient
         // Button Linear Gradient
-        colors={['white', "transparent"]}
+        colors={[Colors.WHITE, "transparent"]}
         style={{padding:20, width: Dimensions.get("screen".width)}}>
             <View
           style={{
