@@ -1,10 +1,15 @@
 import { View, Text } from 'react-native'
 import React from 'react'
+import GoogleMapViewFull from '../Components/Search/GoogleMapViewFull';
+import SearchBar from '../Components/Search/SearchBar';
 
 const Search = () => {
   return (
     <View>
-      <Text>Search</Text>
+      <View style={{position:'absolute', zIndex:20}}>
+        <SearchBar />
+      </View>
+      <GoogleMapViewFull />
     </View>
   )
 }

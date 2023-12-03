@@ -29,7 +29,7 @@ export default function PlaceDetail() {
   };
 
   return (
-    <ScrollView   style={{
+    <ScrollView style={{
       flex: 1,
       backgroundColor: Colors.WHITE,
       padding: 20,

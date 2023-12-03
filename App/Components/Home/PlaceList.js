@@ -10,19 +10,23 @@ const PlaceList = ({ placeList }) => {
   }
   return (
     <View>
-      <Text
-        style={{ fontSize: 18, fontFamily: "Raleway-Semibold", marginTop: 10, marginBottom:15 }}
-      >
-        Found {placeList.length} places
-      </Text>
+    <Text style={{ fontSize: 18, fontFamily: "Raleway-Semibold", marginTop: 10, marginBottom: 15 }}>
+      Found {placeList.length} places
+    </Text>
+    {placeList.length > 0 ? (
       <FlatList 
         data={placeList} 
+        keyExtractor={(item, index) => index.toString()}
         renderItem={({ item }) => (
-          <TouchableOpacity onPress={()=>onPlaceClick(item)}>
+          <TouchableOpacity onPress={() => onPlaceClick(item)}>
             <PlaceItem place={item} />
-          </TouchableOpacity>  
-        )} />
-    </View>
+          </TouchableOpacity>
+        )} 
+      />
+    ) : (
+      <Text>No places found.</Text>
+    )}
+  </View>
   );
 };
 export default PlaceList;
