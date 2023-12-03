@@ -26,7 +26,7 @@ const Search = () => {
       </View>
       <GoogleMapViewFull />
       <View style={{position:'absolute', zIndex:20, bottom:0}}>
-        <BusinessList/>
+        <BusinessList placeList={placeList}/>
       </View>
     </View>
   )
