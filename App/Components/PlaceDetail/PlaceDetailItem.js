@@ -38,7 +38,7 @@ const PlaceDetailItem=({place, onDirectionClick}) => {
         <Text>{place.rating}</Text>
       </View>
       <View>
-        <Text style={{ fontSize: 16, marginTop: 5, color: Colors.DARKGRAY }} numberOfLines={2}>{place.vicinity}</Text>
+        <Text style={{ fontSize: 16, marginTop: 5, color: Colors.DARKGRAY }} numberOfLines={2}>{place.vicinity?place.vicinity:place.formatted_address}</Text>
         {place?.opening_hours ? (
           <Text style={{ fontFamily:"Raleway-Bold", marginTop: 5, color: "red" }}>
             {place?.opening_hours?.open_now == true ? "Open" : "Closed"}
