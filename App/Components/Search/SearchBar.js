@@ -13,7 +13,7 @@ const SearchBar=() => {
       <LinearGradient
         // Button Linear Gradient
         colors={[Colors.WHITE, "transparent"]}
-        style={{padding:20, width: Dimensions.get("screen".width)}}>
+        style={{padding:20, width: Dimensions.get("screen").width}}>
             <View
           style={{
             display: "flex",

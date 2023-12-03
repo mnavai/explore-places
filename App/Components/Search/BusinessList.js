@@ -1,5 +1,6 @@
-import { View, Text, FlatList, TouchableOpacity } from 'react-native'
+import { View, Text, FlatList, TouchableOpacity, Dimensions } from 'react-native'
 import React from 'react'
+import { LinearGradient } from 'expo-linear-gradient';
 import Colors from '../../Shared/Colors'
 import BusinessItem from './BusinessItem'
 import { useNavigation } from '@react-navigation/native'
@@ -10,7 +11,7 @@ const BusinessList=({placeList})=> {
     <View>
         <LinearGradient
         colors={["transparent", Colors.WHITE]}
-        style={{padding:20, width: Dimensions.get("screen".width)}}>
+        style={{padding:20, width: Dimensions.get("screen").width}}>
             <FlatList 
                 data={placeList}
                 horizontal={true}
