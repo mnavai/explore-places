@@ -1,5 +1,5 @@
 import { View, Text, Dimensions } from 'react-native';
-import React from 'react';
+import React, { useState } from 'react';
 import { LinearGradient } from 'expo-linear-gradient';
 import Colors from "../../Shared/Colors";
 import { Image } from "react-native";
@@ -7,6 +7,7 @@ import { TextInput } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
 const SearchBar=() => {
+  const [searchInput, setSearchInput]=useState()
   return (
     <View>
       <LinearGradient
@@ -45,8 +46,8 @@ const SearchBar=() => {
           <TextInput
             placeholder="Search"
             style={{ backgroundColor: Colors.WHITE, width: "80%" }}
-            onChangeText={(value) => console.log(value)}
-            onSubmitEditing={() => console.log(searchInput)}
+            onChangeText={(value) => setSearchInput(value)}
+            onSubmitEditing={() => setSearchText(searchInput)}
           />
         </View>
       </LinearGradient>

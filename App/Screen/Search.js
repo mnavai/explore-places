@@ -22,7 +22,9 @@ const Search = () => {
   return (
     <View>
       <View style={{position:'absolute', zIndex:20}}>
-        <SearchBar />
+        <SearchBar setSearchText={(value)=>{
+          GetNearBySearchPlace(value)
+        }} />
       </View>
       <GoogleMapViewFull placeList={placeList}/>
       <View style={{position:'absolute', zIndex:20, bottom:0}}>
