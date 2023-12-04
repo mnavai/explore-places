@@ -26,7 +26,7 @@ const BusinessItem=({place})=> {
             fontSize:16,marginTop:5}}>{place.name}</Text>
              <Text 
              numberOfLines={2}
-             style={{fontFamily:'raleway',
+             style={{fontFamily:'raleway-regular',
             fontSize:13,marginTop:5,color:Colors.DARK_GRAY}}>
                 {place.vicinity?place.vicinity:place.formatted_address}</Text>
               <View

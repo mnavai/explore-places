@@ -9,11 +9,12 @@ import { useFonts } from "expo-font";
 import * as Font from 'expo-font';
 
 export default function App() {
+  
   const [location, setLocation] = useState(null);
   const [errorMsg, setErrorMsg] = useState(null);
   const [fontsLoaded] = useFonts({
     "raleway-regular": require("./assets/Fonts/raleway-regular.ttf"),
-    "raleway-remibold": require("./assets/Fonts/raleway-semiBold.ttf"),
+    "raleway-semibold": require("./assets/Fonts/raleway-semiBold.ttf"),
     "raleway-bold": require("./assets/Fonts/raleway-bold.ttf"),
   });
 

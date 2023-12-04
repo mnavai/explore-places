@@ -35,7 +35,7 @@ const PlaceItem = ({ place }) => {
           numberOfLines={2}
           style={{
             fontSize: 14,
-            fontFamily: "Raleway-Semibold",
+            fontFamily: "raleway-semibold",
             marginBottom: 5,
           }}
         >

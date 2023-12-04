@@ -11,7 +11,7 @@ const PlaceDetailItem=({place, onDirectionClick}) => {
  
   return (
     <View style={{ display:"flex", alignItems:"center" }}>
-      <Text style={{ fontSize: 26, fontFamily: "Raleway-Bold" }}>{place.name}</Text>
+      <Text style={{ fontSize: 26, fontFamily: "raleway-bold" }}>{place.name}</Text>
       {place?.photos? <Image
         source={{
           uri:
@@ -40,7 +40,7 @@ const PlaceDetailItem=({place, onDirectionClick}) => {
       <View>
         <Text style={{ fontSize: 16, marginTop: 5, color: Colors.DARKGRAY }} numberOfLines={2}>{place.vicinity?place.vicinity:place.formatted_address}</Text>
         {place?.opening_hours ? (
-          <Text style={{ fontFamily:"Raleway-Bold", marginTop: 5, color: "red" }}>
+          <Text style={{ fontFamily:"raleway-bold", marginTop: 5, color: "red" }}>
             {place?.opening_hours?.open_now == true ? "Open" : "Closed"}
           </Text>
         ) : null}
@@ -61,7 +61,7 @@ const PlaceDetailItem=({place, onDirectionClick}) => {
           }}
         >
           <Ionicons name="navigate-circle-outline" size={24} color="black" />
-          <Text style={{ fontFamily: "Raleway", fontSize: 16 }}>Direction</Text>
+          <Text style={{ fontFamily: "raleway-regular", fontSize: 16 }}>Direction</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={()=>Share.SharePlace(place)}
           style={{
@@ -77,7 +77,7 @@ const PlaceDetailItem=({place, onDirectionClick}) => {
           }}
         >
          <Ionicons name="md-share-outline" size={24} color="black" />
-          <Text style={{ fontFamily: "Raleway", fontSize: 16 }}>Share</Text>
+          <Text style={{ fontFamily: "raleway-regular", fontSize: 16 }}>Share</Text>
         </TouchableOpacity>
         </View>
     </View>

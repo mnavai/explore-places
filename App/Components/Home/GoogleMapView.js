@@ -28,7 +28,7 @@ const GoogleMapView = ({placeList}) => {
           marginBottom: 10,
           marginLeft: 3,
           fontWeight: "600",
-          fontFamily: "Raleway-Semibold",
+          fontFamily: "raleway-semibold",
         }}
       >
         Top Near Places

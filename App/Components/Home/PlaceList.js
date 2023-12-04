@@ -10,7 +10,7 @@ const PlaceList = ({ placeList }) => {
   }
   return (
     <View>
-    <Text style={{ fontSize: 18, fontFamily: "Raleway-Semibold", marginTop: 10, marginBottom: 15 }}>
+    <Text style={{ fontSize: 18, fontFamily: "raleway-semibold", marginTop: 10, marginBottom: 15 }}>
       Found {placeList.length} places
     </Text>
     {placeList.length > 0 ? (

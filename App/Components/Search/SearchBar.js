@@ -21,7 +21,7 @@ const SearchBar=({setSearchText}) => {
             justifyContent: "space-between",
           }}
         >
-          <Text style={{ fontFamily: "Raleway-Bold", fontSize: 25 }}>
+          <Text style={{ fontFamily: "raleway-bold", fontSize: 20 }}>
             Discover
           </Text>
           <Image
