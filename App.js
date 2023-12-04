@@ -14,7 +14,7 @@ export default function App() {
   const [errorMsg, setErrorMsg] = useState(null);
   const [fontsLoaded] = useFonts({
     "raleway-regular": require("./assets/Fonts/raleway-regular.ttf"),
-    "raleway-semibold": require("./assets/Fonts/raleway-semiBold.ttf"),
+    "raleway-semibold": require("./assets/Fonts/raleway-semibold.ttf"),
     "raleway-bold": require("./assets/Fonts/raleway-bold.ttf"),
   });
 
