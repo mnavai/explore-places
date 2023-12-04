@@ -6,7 +6,7 @@ import { Image } from "react-native";
 import { TextInput } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
-const SearchBar=() => {
+const SearchBar=({setSearchText}) => {
   const [searchInput, setSearchInput]=useState()
   return (
     <View>
