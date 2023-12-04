@@ -24,7 +24,7 @@ const Home = () => {
     })
   }
   return (
-    <ScrollView style={{padding:40}}>
+    <ScrollView style={{ padding:40, flex:1 }}>
       <Header />
       <GoogleMapView placeList={placeList} />
       <CategoryList setSelectedCategory={(value) => GetNearbySearchPlace(value)} />
