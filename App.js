@@ -6,13 +6,15 @@ import { useEffect, useState } from "react";
 import * as Location from "expo-location";
 import { UserLocationContext } from "./App/Context/UserLocationContext";
 import { useFonts } from "expo-font";
+import * as Font from 'expo-font';
 
 export default function App() {
   const [location, setLocation] = useState(null);
   const [errorMsg, setErrorMsg] = useState(null);
   const [fontsLoaded] = useFonts({
-    "Raleway-Regular": require("./assets/Fonts/Raleway-Regular.ttf"),
-    "Raleway-Semibold": require("./assets/Fonts/Raleway-SemiBold.ttf"),
+    "raleway-regular": require("./assets/Fonts/raleway-regular.ttf"),
+    "raleway-remibold": require("./assets/Fonts/raleway-semiBold.ttf"),
+    "raleway-bold": require("./assets/Fonts/raleway-bold.ttf"),
   });
 
   useEffect(() => {
